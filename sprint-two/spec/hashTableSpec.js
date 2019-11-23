@@ -38,6 +38,7 @@ describe('hashTable', function() {
   it('should handle hash function collisions', function() {
     var v1 = 'val1';
     var v2 = 'val2';
+
     var oldHashFunction = window.getIndexBelowMaxForKey;
     window.getIndexBelowMaxForKey = function() { return 0; };
     hashTable.insert(v1, v1);
